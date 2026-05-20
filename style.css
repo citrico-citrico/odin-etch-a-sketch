@@ -1,0 +1,10 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-item{
+    display: block;
+    background-color: aqua;
+    flex: 1;
+}
