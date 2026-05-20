@@ -1,2 +1,3 @@
 # odin-etch-a-sketch
 Browser version of something between a sketchpad and an Etch-A-Sketch. From the Odin Project
+Program meant to demostrate DOM manipulation skills.
