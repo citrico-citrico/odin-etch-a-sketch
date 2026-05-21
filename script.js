@@ -11,8 +11,12 @@ divs.addEventListener('mouseenter', () => {
 });
 }
 
+
 btn.addEventListener("click", () =>{
-    console.log("elpepe");
+    const myDiv = document.querySelector("#container");
+    while(myDiv.firstChild){
+        myDiv.removeChild(myDiv.lastChild);
+    }
 });
 
 
