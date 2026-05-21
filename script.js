@@ -20,3 +20,16 @@ btn.addEventListener("click", () =>{
 });
 
 
+btn.addEventListener("click", function() {
+    let userInput = prompt("Input a number of squares per side (limit of 100)", "16");
+    let numberValue = +userInput;
+    if(+numberValue > 100){
+        alert("Select a number less than 100");
+        numberValue = 16;
+    } else if(numberValue < 0){
+        alert("Input a positive number");
+    } else{
+        createGrid(numberValue);
+    }
+
+})
