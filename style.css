@@ -1,10 +1,15 @@
 #container{
     display: flex;
     flex-wrap: wrap;
+    height: 1000px;
+    width: 1000px;
 }
 
 .list-item{
     display: block;
-    background-color: aqua;
-    flex: 1;
+    background-color: white;
+    height: 55px;
+    width: 55px;
+    margin: 1.5px;
+    border: 1px solid black;
 }
