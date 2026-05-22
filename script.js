@@ -20,27 +20,41 @@ btn.addEventListener("click", () =>{
 });
 
 function createGrid(number){
-    const dividedValue = Math.round(1000/number);
-    const sideValue = (dividedValue/100) * 90;
-    const marginValue = (dividedValue/100) * 2.5;
+    let sideValue = 1000/(number);
+    sideValue = (sideValue/100) * 96;
+    borderValue = (sideValue/100) * 3;
+    borderValue = borderValue / 4;
+    borderValue = borderValue + "px";
+    sideValue = sideValue + "px";
+    
+   
+
+    console.log(sideValue);
+    console.log(borderValue);
 
     for (let i = 0; i < number * number; i++){
-    const divs = document.createElement("div");
-    divs.className = "new-list-item";
-    container.appendChild(divs);
+    const newDivs = document.createElement("div");
+    newDivs.className = "new-list-item";
+    container.appendChild(newDivs);
 
-     const parent = document.getElementById('#container');
-     const children = container.querySelectorAll("new-list-item");
+    newDivs.style.height = sideValue;
+    newDivs.style.width = sideValue;
+    newDivs.style.borderWidth = borderValue;
+    //newDivs.style.margin = marginValue;
 
-        children.forEach(child => {
-            children.style.height = sideValue;
-            children.style.width = sideValue;
-            children.style.margin = marginValue
-        })
+    //  const parent = document.getElementById('#container');
+    //  const children = container.querySelectorAll("new-list-item");
+
+    //     children.forEach(child => {
+    //         console.log("ll");
+    //         children.style.height = sideValue;
+    //         children.style.width = sideValue;
+    //         children.style.margin = marginValue
+    //     })
     
-    divs.addEventListener('mouseenter', () => {
-        divs.style.backgroundColor = 'gray';
-    });
+    // newDivs.addEventListener('mouseenter', () => {
+    //     newDivs.style.backgroundColor = 'gray';
+    // });
     }  
 
    
@@ -51,7 +65,8 @@ function createGrid(number){
 }
 
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function(e) {
+    e.preventDefault(); 
     let userInput = prompt("Input a number of squares per side (limit of 100)", "16");
     let numberValue = +userInput;
     if(+numberValue > 100){
