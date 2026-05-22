@@ -20,17 +20,18 @@ btn.addEventListener("click", () =>{
 });
 
 function createGrid(number){
-    let sideValue = 1000/(number);
-    sideValue = (sideValue/100) * 96;
-    borderValue = (sideValue/100) * 3;
-    borderValue = borderValue / 4;
-    borderValue = borderValue + "px";
+    let sideValue = (1000)/number;
+
+    // sideValue = (sideValue/100) * 96;
+    // borderValue = (sideValue/100) * 3;
+    // borderValue = borderValue / 4;
+    // borderValue = borderValue + "px";
     sideValue = sideValue + "px";
     
    
 
     console.log(sideValue);
-    console.log(borderValue);
+    //console.log(borderValue);
 
     for (let i = 0; i < number * number; i++){
     const newDivs = document.createElement("div");
@@ -39,7 +40,8 @@ function createGrid(number){
 
     newDivs.style.height = sideValue;
     newDivs.style.width = sideValue;
-    newDivs.style.borderWidth = borderValue;
+    newDivs.style.boxSizing = "border-box";
+    // newDivs.style.borderWidth = borderValue;
     //newDivs.style.margin = marginValue;
 
     //  const parent = document.getElementById('#container');
@@ -72,7 +74,7 @@ btn.addEventListener("click", function(e) {
     if(+numberValue > 100){
         numberValue = 16;
         alert("Select a number less than 100");
-    } else if(numberValue < 0){
+    } else if(numberValue <= 0){
         numberValue = 16;
         alert("Input a positive number");
     }
