@@ -6,6 +6,7 @@ body{
 
 #container{
     display: flex;
+    align-content: flex-start;
     flex-wrap: wrap;
     height: 1000px;
     width: 1000px;
@@ -14,8 +15,13 @@ body{
 .list-item{
     display: block;
     background-color: white;
-    height: 55px;
-    width: 55px;
-    margin: 1.5px;
+    height: 60px;
+    width: 60px;
+    border: 0.1px solid black;
+}
+
+.new-list-item{
+    display: block;
+    background-color: white;
     border: 1px solid black;
 }
