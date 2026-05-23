@@ -20,18 +20,9 @@ btn.addEventListener("click", () =>{
 });
 
 function createGrid(number){
-    let sideValue = (1000)/number;
-
-    // sideValue = (sideValue/100) * 96;
-    // borderValue = (sideValue/100) * 3;
-    // borderValue = borderValue / 4;
-    // borderValue = borderValue + "px";
+    let sideValue = 1000/number;
     sideValue = sideValue + "px";
     
-   
-
-    console.log(sideValue);
-    //console.log(borderValue);
 
     for (let i = 0; i < number * number; i++){
     const newDivs = document.createElement("div");
@@ -40,30 +31,11 @@ function createGrid(number){
 
     newDivs.style.height = sideValue;
     newDivs.style.width = sideValue;
-    newDivs.style.boxSizing = "border-box";
-    // newDivs.style.borderWidth = borderValue;
-    //newDivs.style.margin = marginValue;
-
-    //  const parent = document.getElementById('#container');
-    //  const children = container.querySelectorAll("new-list-item");
-
-    //     children.forEach(child => {
-    //         console.log("ll");
-    //         children.style.height = sideValue;
-    //         children.style.width = sideValue;
-    //         children.style.margin = marginValue
-    //     })
     
-    // newDivs.addEventListener('mouseenter', () => {
-    //     newDivs.style.backgroundColor = 'gray';
-    // });
-    }  
-
-   
-
-   
-    
-   
+     newDivs.addEventListener('mouseenter', () => {
+    newDivs.style.backgroundColor = 'gray';
+    });
+    }; 
 }
 
 
