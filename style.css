@@ -15,13 +15,15 @@ body{
 .list-item{
     display: block;
     background-color: white;
-    height: 58.5px;
-    width: 58.5px;
+    height: 62.5px;
+    width: 62.5px;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .new-list-item{
     display: block;
     background-color: white;
-    border: solid black;
+    border: 1px solid black;
+    box-sizing: border-box;
 }
