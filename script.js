@@ -52,6 +52,4 @@ btn.addEventListener("click", function(e) {
     }
 
    createGrid(numberValue);
-
-
-})
+});
